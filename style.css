@@ -9,9 +9,10 @@
   font-size: 48px;
 }
 
-h1 {
-  color: #3f51b5;
+.calendar-color {
+  background-color: #c5cae9;
 }
+
 .yenot-color {
   background-color: #3f51b5;
   color:#fff;
