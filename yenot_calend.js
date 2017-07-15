@@ -34,6 +34,20 @@ window.onload = function(){
       return currentMonth;
     }
   }
+
+  function drowYenotCalend(strID, date) {
+    var c = document.getElementById(strID);
+    var ctx = c.getContext("2d");
+    ctx.strokeStyle="white";
+    ctx.lineWidth=3;
+    ctx.beginPath();
+    ctx.arc(c.width/2,c.height/2,90,0,2*Math.PI);
+    ctx.stroke();
+    ctx.font = "70px Roboto";
+    ctx.fillStyle = "white";
+    ctx.textAlign = "center";
+    ctx.fillText(date, c.width/2, c.height/1.6);
+  }
   /*document.getElementById('canvas').addEventListener('click',function(evt){
                                       alert(evt.clientX + ',' + evt.clientY);
                                       },false);
@@ -43,6 +57,10 @@ window.onload = function(){
   var tmpCalend = new yenotCalend();
   //tmpCalend.changeUS(true);
   var a = tmpCalend.allMonth(new Date("2017/06/31"));
+  var b = tmpCalend.allWeek(new Date("2017/06/31"));
+  for(var i = 1; i < 8; i++){
+    drowYenotCalend("date" + i, b[i-1]);
+  }
   //document.getElementById('date').innerHTML = tmpCalend.allWeek(new Date("2017/06/29"));
   document.getElementById('date').innerHTML = a[0] +
                                               '<br>'+ a[1] +

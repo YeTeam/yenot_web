@@ -17,3 +17,10 @@
   background-color: #3f51b5;
   color:#fff;
 }
+
+.yenot-canvas {
+  display:block;
+  float: left;
+  width:14%;
+  height: auto;
+}
